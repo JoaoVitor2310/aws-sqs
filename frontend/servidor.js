@@ -30,13 +30,11 @@ app.post('/solicitar_imagens', (req, res) => {
             if (error) {
                 console.error("Erro: " + error);
             } else {
-                console.error("Mensagem enviada com sucesso, id: " + data.MessageId);
+                console.log("Mensagem enviada com sucesso, id: " + data.MessageId);
             }
         })
     }
-
-    console.log(req.body);
-    res.json({ body: req.body, ok: true });
+res.json({ body: req.body, ok: true });
 })
 
 app.listen(3000, () => {
